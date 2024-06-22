@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Validation</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-row-gap: 10px;
+            grid-column-gap: 10px;
+        }
+        .container label {
+            margin-right: 10px;
+        }
+        .container input {
+            margin-right: 10px;
+        }
+        .message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1">
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2">
+        <label for="input3">Input 3:</label>
+        <input type="text" id="input3">
+        <label for="input4">Input 4:</label>
+        <input type="text" id="input4">
+        <label for="input5">Input 5:</label>
+        <input type="text" id="input5">
+        <label for="input6">Input 6:</label>
+        <input type="text" id="input6">
+        <label for="input7">Input 7:</label>
+        <input type="text" id="input7">
+        <label for="input8">Input 8:</label>
+        <input type="text" id="input8">
+    </div>
+    <button onclick="submitForm()">Submit</button>
+    <div class="message" id="message"></div>
+
+    <script>
+        function submitForm() {
+            var inputs = [];
+            for (var i = 1; i <= 8; i++) {
+                inputs.push(document.getElementById('input' + i).value);
+            }
+            var messageDiv = document.getElementById('message');
+
+            if (inputs.every(input => input !== '')) {
+                var link = `https://example.com/?${inputs.map((input, index) => `param${index + 1}=${input}`).join('&')}`;
+                window.location.href = link;
+
+                for (var i = 1; i <= 8; i++) {
+                    document.getElementById('input' + i).value = '';
+                }
+                messageDiv.innerHTML = '';
+            } else {
+                messageDiv.innerHTML = 'Please fill in all text fields.';
+            }
+        }
+    </script>
+</body>
+</html>

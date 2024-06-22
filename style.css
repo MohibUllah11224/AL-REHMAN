@@ -1,0 +1,376 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the banner */
+.banner {
+    background-color: #fefeff; /* Background color of the banner */
+    color: #000764; /* Text color of the banner */
+    text-align: center; /* Center-align text */
+    padding: 10px; /* Add padding */
+}
+
+/* Style the banner content */
+.banner-content {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 0.2fr 1fr; /* Two equal columns */
+    align-items: center; /* Center align items vertically */
+}
+
+
+
+.banner img {
+     max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+    height: 140px;/* Maintain aspect ratio */
+}
+
+/* Style the navbar */
+ /* Navbar container */
+ .navbar {
+  overflow: hidden;
+  background-color: #000764;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown1{
+  float: left;
+  overflow: hidden;
+}
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown1 .dropbtn1 {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn{
+  background-color: red;
+}
+.navbar a:hover, .dropdown1:hover .dropbtn1{
+  background-color: red;
+}
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content1 a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #ddd;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+.dropdown1:hover .dropdown-content1 {
+  display: block;
+} 
+/* Style the main content */
+.content {
+    padding: 20px; /* Add padding to separate content from banner and navbar */
+}
+/*slide show */
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: Auto;
+ 
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.card-container {
+  background-color: #ffffff;
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  
+}
+
+.card-container ul {
+  text-align: center;
+  margin: auto 0;
+}
+
+.card-container li {
+  list-style-type: none;
+  padding: 1.5em 1.5em 1.5em .5em;
+  text-align: left;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.card {
+  transition: 0.2s;
+  overflow: hidden;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+
+.card-image {
+  box-shadow: 1px 1px #000;
+  transition: .3s;
+  background-color: #000764;
+  margin: auto 0;
+  text-align: center;
+}
+
+.card-image:hover {
+  transform: scale(2.25, .25);
+  transform-origin: 50% 50%;
+  box-shadow: 2 2 rgb(253, 253, 253);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: rgb(255, 255, 255);
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+  color: #000764;
+}
+
+.btn {
+  background-color: #000764;/* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 1px 1px; /* Some padding */
+  font-size: 40px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  margin-left: auto; 
+  margin-right:auto;
+  text-align: center; /* Aligns content in the center horizontally */
+  margin-top: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+
+_scroll-container {
+  width: 100%;
+  height: 100px; /* Set height for scrolling area */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #000; /* Optional: for better visibility */
+}
+scroll-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  animation: scroll-text 3s linear forwards;
+  @keyframes scroll-text {
+    0% {
+        bottom: -100%;
+    }
+    100% {
+        bottom: 50%; /* Stop in the middle */
+    }
+}
+}
+
+.nav-button {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+#prev-button {
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+}
+#next-button {
+  position: absolute;
+  right: 0;
+  color: #ffffff;
+}
